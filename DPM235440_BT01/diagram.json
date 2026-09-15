@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "NGUYEN TRAN THUY LAM",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 141, "left": -35.6, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -105, "left": -125.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -10.9, "left": 249.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:5V", "bb1:tp.5", "red", [ "v0" ] ],
+    [ "pot1:SIG", "bb1:15t.a", "green", [ "v134.4", "h-163.6" ] ],
+    [ "bb1:15t.c", "uno:A0", "green", [ "h-42.2" ] ],
+    [ "pot1:VCC", "bb1:tp.25", "red", [ "v0" ] ],
+    [ "uno:GND.2", "bb1:tn.5", "black", [ "v0" ] ],
+    [ "pot1:GND", "bb1:tn.25", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
