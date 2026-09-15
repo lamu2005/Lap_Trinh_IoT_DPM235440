@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "NGUYEN TRAN THUY LAM",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -89.4, "left": 204.4, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -85.8, "left": -96.6, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -186, "left": 387.8, "attrs": { "color": "red" } },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 190.7, "left": 76.6, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -24.85,
+      "left": 345.6,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "bb1:bp.1", "red", [ "v0" ] ],
+    [ "uno:GND.2", "bb1:bn.1", "black", [ "v0" ] ],
+    [ "pot1:GND", "bb1:bn.5", "black", [ "v48", "h182.4", "v-200.3" ] ],
+    [ "pot1:VCC", "bb1:bp.5", "red", [ "v28.8", "h143.2", "v-191.1" ] ],
+    [ "uno:A0", "pot1:SIG", "green", [ "v0" ] ],
+    [ "led1:A", "bb1:20t.a", "red", [ "v0" ] ],
+    [ "bb1:20t.e", "uno:13", "red", [ "v9.6", "h-384.4" ] ],
+    [ "bb1:13t.e", "bb1:bn.10", "black", [ "v0" ] ],
+    [ "r1:1", "bb1:13t.c", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:19t.c", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:19t.a", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
