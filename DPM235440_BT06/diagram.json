@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "author": "NGUYEN TRAN THUY LAM",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -108.6, "left": -16.4, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 115.8, "left": -19.8, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -24,
+      "left": 57.05,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -24,
+      "left": 76.25,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -24,
+      "left": 95.45,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -178.4,
+      "left": 77.9,
+      "attrs": { "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "rgb1:COM", "bb1:10t.a", "black", [ "v0" ] ],
+    [ "rgb1:R", "bb1:9t.a", "red", [ "v0" ] ],
+    [ "rgb1:G", "bb1:11t.a", "green", [ "v0" ] ],
+    [ "rgb1:B", "bb1:13t.a", "cyan", [ "v0" ] ],
+    [ "r1:1", "bb1:9t.b", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:9b.f", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:11t.b", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:11b.f", "", [ "$bb" ] ],
+    [ "r3:1", "bb1:13t.b", "", [ "$bb" ] ],
+    [ "r3:2", "bb1:13b.f", "", [ "$bb" ] ],
+    [ "bb1:10t.e", "uno:GND.1", "black", [ "v0" ] ],
+    [ "bb1:9b.j", "uno:11", "red", [ "v86.4", "h37.8" ] ],
+    [ "bb1:11b.j", "uno:10", "green", [ "v67.2", "h28.8", "v9.6" ] ],
+    [ "bb1:13b.j", "uno:9", "cyan", [ "h19.2", "v76.8" ] ]
+  ],
+  "dependencies": {}
+}

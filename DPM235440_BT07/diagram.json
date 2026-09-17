@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "NGUYEN TRAN THUY LAM",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -79.8, "left": -74, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 154.2, "left": -67.8, "attrs": {} },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip1",
+      "top": -132.3,
+      "left": -9.6,
+      "attrs": { "pixels": "8" }
+    }
+  ],
+  "connections": [
+    [ "strip1:DIN", "uno:12", "gold", [ "h-19.2", "v297.2", "h95.5" ] ],
+    [ "strip1:VDD", "uno:5V", "red", [ "h-38.4", "v364.9" ] ],
+    [ "strip1:VSS", "uno:GND.1", "#8f4814", [ "v162.4" ] ]
+  ],
+  "dependencies": {}
+}
