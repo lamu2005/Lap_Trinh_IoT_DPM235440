@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "LPG Leakage Detector with Half Breadboard",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 221.4, "left": -0.6, "attrs": {} },
+    { "type": "wokwi-breadboard-half", "id": "bb", "top": 217.8, "left": 281.2, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": -63.77, "left": 121.6, "attrs": {} },
+    { "type": "wokwi-gas-sensor", "id": "mq2", "top": 137.1, "left": 448.6, "attrs": {} },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 117.6, "left": 376.2, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay", "top": 105.8, "left": 9.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:GND.1", "bb:tn.1", "black", [ "v28.8", "h201.9", "v-19.1" ] ],
+    [ "lcd:VDD", "bb:tp.5", "red", [ "v-9.6", "h-182.3", "v316.8", "h384", "v-144.3" ] ],
+    [ "lcd:V0", "bb:tn.6", "#8f4814", [ "v-19.2", "h-201.9", "v336", "h401.6" ] ],
+    [ "lcd:RS", "uno:12", "green", [ "v144", "h-221" ] ],
+    [ "lcd:RW", "bb:tn.7", "gray", [ "v144", "h190.3" ] ],
+    [ "lcd:E", "uno:11", "gold", [ "v153.6", "h-58.2" ] ],
+    [ "lcd:D4", "uno:5", "magenta", [ "v86.4", "h-42.2" ] ],
+    [ "lcd:D5", "uno:4", "purple", [ "h0.1", "v96", "h-42.3" ] ],
+    [ "lcd:D6", "uno:3", "blue", [ "v105.6", "h-42.2" ] ],
+    [ "lcd:D7", "uno:2", "cyan", [ "v115.2", "h-42.2" ] ],
+    [ "lcd:A", "bb:tp.15", "red", [ "v38.4", "h182.3", "v124.5" ] ],
+    [ "lcd:K", "bb:tn.15", "black", [ "v28.8", "h182.4", "v144.1" ] ],
+    [ "mq2:VCC", "bb:tp.25", "red", [ "v-0.9", "h9.6", "v47.7" ] ],
+    [ "mq2:GND", "bb:tn.25", "black", [ "v-0.8", "h19.2", "v67.3" ] ],
+    [ "mq2:AOUT", "uno:A0", "blue", [ "h28.8", "v278.4", "h-407" ] ],
+    [ "buzzer:1", "uno:10", "black", [ "h-250.3" ] ],
+    [ "buzzer:2", "bb:tn.10", "red", [ "h-0.4", "v19.2", "h315.2" ] ],
+    [ "relay:VCC", "bb:tp.28", "red", [ "v0" ] ],
+    [ "relay:GND", "bb:tn.28", "black", [ "v0" ] ],
+    [ "relay:IN", "uno:13", "yellow", [ "v57.4", "h201.2" ] ],
+    [ "relay:GND", "uno:GND.1", "orange", [ "h-9.6", "v76.4", "h115.2", "v19.2" ] ],
+    [ "relay:VCC", "bb:tp.3", "red", [ "h-19.2", "v144", "h344" ] ],
+    [ "bb:tp.8", "uno:5V", "red", [ "v173.1", "h-232.6" ] ],
+    [ "bb:tn.2", "lcd:VSS", "white", [ "h1.6", "v-48.1", "h-172.8", "v-124.8" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "Fire Alarm System Fixed Wiring",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 115.8, "left": -0.6, "attrs": {} },
+    { "type": "wokwi-breadboard-half", "id": "bb", "top": 121.8, "left": 310, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led_red",
+      "top": 73.2,
+      "left": 321,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 214.6,
+      "left": 306.35,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 12, "left": 136.2, "attrs": {} },
+    { "type": "wokwi-gas-sensor", "id": "mq2", "top": 146.7, "left": -156.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "led_red:K", "uno:GND.2", "black", [ "v0" ] ],
+    [ "uno:8", "buzzer:1", "red", [ "h-9.2", "v-28.8" ] ],
+    [ "buzzer:2", "uno:GND.2", "black", [ "h-0.4", "v211.3" ] ],
+    [ "bb:1t.a", "led_red:A", "green", [ "v0" ] ],
+    [ "led_red:C", "bb:2t.a", "black", [ "v0" ] ],
+    [ "bb:2t.e", "uno:GND.3", "black", [ "v86.4", "h-167.2" ] ],
+    [ "bb:1b.h", "uno:7", "green", [ "h-147.6" ] ],
+    [ "mq2:VCC", "uno:5V", "red", [ "h9.6", "v123.9", "h169" ] ],
+    [ "mq2:GND", "uno:GND.1", "black", [ "h19.2", "v-58.4" ] ],
+    [ "mq2:AOUT", "uno:A0", "green", [ "v-19.2", "h-163.2", "v182.4", "h389.8" ] ],
+    [ "r1:1", "bb:1b.g", "", [ "$bb" ] ],
+    [ "r1:2", "bb:1t.c", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}

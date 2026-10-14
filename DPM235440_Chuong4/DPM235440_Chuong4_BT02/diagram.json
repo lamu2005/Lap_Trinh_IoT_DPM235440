@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "NTC Temp Sensor with LCD1602 I2C",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 120, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 185,
+      "left": -163.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 140.8,
+      "left": 303.2,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "ntc1:VCC", "uno:5V", "red", [ "h9.6", "v124.8", "h179.2" ] ],
+    [ "ntc1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "ntc1:OUT", "uno:A1", "green", [ "v124.7", "h246.3" ] ],
+    [ "lcd1:GND", "uno:GND.2", "black", [ "h-137.7" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-9.6", "v0.1", "h-105.6", "v134.4", "h-32" ] ],
+    [ "lcd1:SDA", "uno:A4", "blue", [ "h-57.6", "v119.7" ] ],
+    [ "lcd1:SCL", "uno:A5", "yellow", [ "h-48", "v110.2" ] ]
+  ],
+  "dependencies": {}
+}

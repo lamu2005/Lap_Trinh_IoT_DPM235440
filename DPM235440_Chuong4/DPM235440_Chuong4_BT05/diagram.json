@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "IR Receiver with Breadboard",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 115.8, "left": -0.6, "attrs": {} },
+    { "type": "wokwi-breadboard-half", "id": "bb", "top": 121.8, "left": 310, "attrs": {} },
+    { "type": "wokwi-ir-receiver", "id": "ir1", "top": -1.35, "left": 305.42, "attrs": {} },
+    { "type": "wokwi-ir-remote", "id": "remote", "top": 9.6, "left": 470.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "ir1:VCC", "bb:1t.a", "red", [ "v0" ] ],
+    [ "bb:1t.e", "uno:5V", "red", [ "v0" ] ],
+    [ "ir1:GND", "bb:2t.a", "black", [ "v96", "h19.2" ] ],
+    [ "bb:2t.e", "uno:GND.1", "black", [ "v-9.6", "h-230.7" ] ],
+    [ "ir1:DAT", "bb:3t.a", "green", [ "v76.8", "h9.6" ] ],
+    [ "bb:3t.e", "uno:8", "green", [ "v-19.2", "h-182.8" ] ]
+  ],
+  "dependencies": {}
+}

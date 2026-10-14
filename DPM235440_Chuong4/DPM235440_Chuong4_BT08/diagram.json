@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "NGUYEN TRAN THUY LAM",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -47.4, "left": 9, "attrs": {} },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -178.4,
+      "left": -26.58,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "pir1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pir1:OUT", "uno:7", "green", [ "v48", "h172.66" ] ],
+    [ "pir1:GND", "uno:GND.3", "black", [ "v38.4", "h258.94", "v192.1" ] ]
+  ],
+  "dependencies": {}
+}
